@@ -49,7 +49,7 @@ const Index = () => {
                                 </thead>
                                 <tbody>
                                     {clients.map((client, index) => (
-                                        <ClientRow {...{ key: index, client }} />
+                                        <ClientRow key={index} {...{ client }} />
                                     ))}
                                 </tbody>
                             </table>

@@ -6,7 +6,7 @@ import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Resp
 // HOOKS
 import useTopSeller from '../hooks/chart/useTopSeller';
 
-const topSellers = () => {
+const TopSellers = () => {
     const { loading, error, sellers, startPolling, stopPolling } = useTopSeller();
 
     useEffect(() => {
@@ -35,6 +35,7 @@ const topSellers = () => {
                 <h1 className="px-4 sm:px-8 text-gray-800 text-2xl font-bold uppercase">Mejores vendedores</h1>
             </div>
             <div className="flex justify-center items-center">
+                {/* <ResponsiveContainer> */}
                 <BarChart
                     className="mt-10"
                     width={500}
@@ -54,9 +55,10 @@ const topSellers = () => {
                     <Legend />
                     <Bar dataKey="total" fill="#3498DB" className="text-blue-200" />
                 </BarChart>
+                {/* </ResponsiveContainer> */}
             </div>
         </Layout>
     );
 };
 
-export default topSellers;
+export default TopSellers;

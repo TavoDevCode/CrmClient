@@ -61,7 +61,7 @@ const Order = ({ order }) => {
             <div className="mx-2">
                 <h1 className="text-md font-semibold">Resumen del pedido</h1>
                 {orders.map((order, index) => (
-                    <Orders {...{ key: index, order }} />
+                    <Orders key={index} {...{ order }} />
                 ))}
                 <p>
                     <span className="font-bold">Total a pagar:</span> ${total}

@@ -31,7 +31,7 @@ const Index = () => {
                     ) : (
                         <>
                             {orders.map((order, index) => (
-                                <Order {...{ key: index, order }} />
+                                <Order key={index} {...{ order }} />
                             ))}
                         </>
                     )}

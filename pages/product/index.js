@@ -47,7 +47,7 @@ const Index = () => {
                                 </thead>
                                 <tbody>
                                     {products.map((product, index) => (
-                                        <ProductRow {...{ key: index, product }} />
+                                        <ProductRow key={index} {...{ product }} />
                                     ))}
                                 </tbody>
                             </table>

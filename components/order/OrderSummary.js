@@ -11,7 +11,7 @@ const OrderSummary = ({ products, amountProducts, updateTotalPayment }) => {
             {products.length > 0 ? (
                 <>
                     {products.map((product, index) => (
-                        <ProductsSummary {...{ key: index, product, amountProducts, updateTotalPayment }} />
+                        <ProductsSummary key={index} {...{ product, amountProducts, updateTotalPayment }} />
                     ))}
                 </>
             ) : (

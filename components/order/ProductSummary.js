@@ -5,15 +5,15 @@ const ProductsSummary = ({ product, amountProducts, updateTotalPayment }) => {
 
     const [amount, setAmount] = useState(0);
 
-    useEffect(() => {
-        updateProduct();
-        updateTotalPayment();
-    }, [amount]);
-
     const updateProduct = () => {
         const newProduct = { ...product, amount: Number(amount) };
         amountProducts(newProduct);
     };
+
+    useEffect(() => {
+        updateProduct();
+        updateTotalPayment();
+    }, [amount]);
 
     return (
         <div className="flex justify-between  mt-5">
